@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetInfoByAreaCode>
+         <!--Optional:-->
+         <web:USAreaCode>704</web:USAreaCode>
+      </web:GetInfoByAreaCode>
+   </soapenv:Body>
+</soapenv:Envelope>

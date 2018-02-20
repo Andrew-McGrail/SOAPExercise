@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetInfoByCity>
+         <!--Optional:-->
+         <web:USCity>Mooresville</web:USCity>
+      </web:GetInfoByCity>
+   </soapenv:Body>
+</soapenv:Envelope>

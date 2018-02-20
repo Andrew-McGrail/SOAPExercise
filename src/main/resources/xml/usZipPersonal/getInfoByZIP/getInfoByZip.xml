@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetInfoByZIP>
+         <!--Optional:-->
+         <web:USZip>28117</web:USZip>
+      </web:GetInfoByZIP>
+   </soapenv:Body>
+</soapenv:Envelope>
