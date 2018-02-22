@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetUKLocationByTown>
+         <!--Optional:-->
+         <web:Town>Shawford</web:Town>
+      </web:GetUKLocationByTown>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -10,7 +10,7 @@ import com.orasi.utils.TestReporter;
 
 public class TestUpdate {
 	@Test
-	public void testUpdate() {				// Tests https://reqres.in/ "Put" Updated			PASSED(FAILED NOW?)
+	public void testUpdate() {				// Tests https://reqres.in/ "Put" Updated			Always Pass (FAIL)
 		
 		String name = "morpheus";
 		String job = "zion resident";
@@ -25,13 +25,13 @@ public class TestUpdate {
 		TestReporter.logAPI(response.getStatusCode() == 200,
 				"Validating the Correct Response", response);
 		
-		TestReporter.softAssertTrue(data.getName() == "morpheus",
+		TestReporter.softAssertTrue(data.getName() == "morpheus",			//<-- Not Checked?
 				"Validating the response Name");
 		
-		TestReporter.softAssertTrue(data.getJob() == "zion resident",
+		TestReporter.softAssertTrue(data.getJob() == "zion resident",		//<-- Not Checked?
 				"Validating the response Job");
 		
-		TestReporter.softAssertTrue(data.getUpdatedAt() != "",
+		TestReporter.softAssertTrue(data.getUpdatedAt() != "",				//<-- FIX!
 				"Validating the time updated");
 	}
 }

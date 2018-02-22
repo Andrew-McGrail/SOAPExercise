@@ -2,7 +2,7 @@
 	<soap:Header />
 	<soap:Body>
 		<web:GetInfoByCity>
-			<web:USCity>Greensboro</web:USCity>
+			<web:USCity>Mooresville</web:USCity>
 		</web:GetInfoByCity>
 	</soap:Body>
 </soap:Envelope> 

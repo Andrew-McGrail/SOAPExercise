@@ -20,10 +20,10 @@ public class TestSingleResource {
 		TestReporter.logAPI(response.getStatusCode() == 200,
 				"Validating the Correct Response", response);
 		
-		TestReporter.softAssertTrue(data.getID() == 2,
+		TestReporter.softAssertTrue(data.getID() == 2,						//<-- Not Checked?
 				"Validating the table id for the item");
 		
-		TestReporter.softAssertTrue(data.getName() == "fuchsia rose",
+		TestReporter.softAssertTrue(data.getName() == "fuchsia rose",		//<-- Not Checked?
 				"Validating the name for the entry");
 		
 		TestReporter.softAssertTrue(data.getYear() == 2001,

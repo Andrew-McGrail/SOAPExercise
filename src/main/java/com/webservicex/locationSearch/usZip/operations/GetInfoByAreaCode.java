@@ -8,7 +8,7 @@ import com.webservicex.locationSearch.usZip.USZip;
 
 public class GetInfoByAreaCode extends USZip{
     public GetInfoByAreaCode() {
-	File xml = new File(this.getClass().getResource(Constants.XML_FILES + "/usZipSoap/getInfoByAreaCode/getInfoByAreaCode.xml").getPath());
+	File xml = new File(this.getClass().getResource(Constants.XML_FILES + "/usZipPersonal/getInfoByAreaCode/getInfoByAreaCode.xml").getPath());
 	setRequestDocument(XMLTools.makeXMLDocument(xml));
 
 	//Generate a request from a project xml file

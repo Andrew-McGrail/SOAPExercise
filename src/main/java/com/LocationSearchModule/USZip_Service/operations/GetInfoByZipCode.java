@@ -23,6 +23,6 @@ public class GetInfoByZipCode extends USZip{
 	}
 	
 	public int getNumberOfResults() {
-		return getNumberOfResponseNodesByXPath("/Envelope/Body/GetInfoByZIPReponse/GetInfoByZIPResult/NewDataSet/Table");
+		return getNumberOfResponseNodesByXPath("/Envelope/Body/GetInfoByZIPResponse/GetInfoByZIPResult/NewDataSet/Table");
 	}
 }

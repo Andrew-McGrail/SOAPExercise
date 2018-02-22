@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 import com.orasi.utils.Constants;
 import com.orasi.utils.TestEnvironment;
 import com.orasi.utils.TestReporter;
-import com.webservicex.locationSearch.usZip.operations.GetInfoByAreaCode;
-import com.webservicex.locationSearch.usZip.operations.GetInfoByCity;
-import com.webservicex.locationSearch.usZip.operations.GetInfoByState;
-import com.webservicex.locationSearch.usZip.operations.GetInfoByZip;
+import com.LocationSearchModule.USZip_Service.operations.GetInfoByAreaCode;
+import com.LocationSearchModule.USZip_Service.operations.GetInfoByCity;
+import com.LocationSearchModule.USZip_Service.operations.GetInfoByState;
+import com.LocationSearchModule.USZip_Service.operations.GetInfoByZipCode;
 
 public class TestSoapService_USZip extends TestEnvironment{
 	
@@ -42,7 +42,7 @@ public class TestSoapService_USZip extends TestEnvironment{
 	
 	@Test
 	public void getInfoByZip() {
-		GetInfoByZip getInfo = new GetInfoByZip();
+		GetInfoByZipCode getInfo = new GetInfoByZipCode();
 		getInfo.setZip("28117");
 		getInfo.sendRequest();
 		TestReporter.logAPI(getInfo.getNumberOfResults() !=0, "Results were returned", getInfo);

@@ -10,7 +10,7 @@ import com.orasi.utils.TestReporter;
 
 public class TestCreate {
 	@Test 
-	public void testCreate() {							// Tests https://reqres.in/ Create example						PASSED
+	public void testCreate() {							// Tests https://reqres.in/ Create example						ALWAYS PASS(FAIL)
 		
 		String name = "morpheus";
 		String job = "leader";
@@ -31,10 +31,10 @@ public class TestCreate {
 		TestReporter.softAssertTrue(data.getJob() == "leader",
 				"Validating the entry name");
 		
-		TestReporter.softAssertTrue(data.getID() == 153,
+		TestReporter.softAssertTrue(data.getID() == 409,
 				"Validating the entry name");
 		
-		TestReporter.softAssertTrue(data.getCreatedAt() == "2018-02-20T21:36:34.880Z",
+		TestReporter.softAssertTrue(data.getCreatedAt() == "2018-02-21T13:46:07.112Z",
 				"Validating the entry name");
 		
 	}

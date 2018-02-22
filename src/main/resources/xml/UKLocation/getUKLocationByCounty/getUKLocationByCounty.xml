@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetUKLocationByCounty>
+         <!--Optional:-->
+         <web:County>Hampshire</web:County>
+      </web:GetUKLocationByCounty>
+   </soapenv:Body>
+</soapenv:Envelope>

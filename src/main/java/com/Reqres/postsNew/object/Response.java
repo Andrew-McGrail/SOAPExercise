@@ -3,93 +3,97 @@ package com.Reqres.postsNew.object;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-"page",
-"per_page",
-"total",
-"total_pages",
-"data"
-})
 
 public class Response {
 	
-	@JsonProperty("page")
 	private Long page;
-	@JsonProperty("per_page")
 	private Long perPage;
-	@JsonProperty("total")
 	private Long total;
-	@JsonProperty("total_pages")
 	private Long totalPages;
-	@JsonProperty("data")
+	private Long id;
+	private String name;
+	private String job;
+	private String createdAt;
 	private List<Response> data = null;
-	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-	@JsonProperty("page")
 	public Long getPage() {
 	return page;
 	}
 
-	@JsonProperty("page")
 	public void setPage(Long page) {
 	this.page = page;
 	}
 
-	@JsonProperty("per_page")
 	public Long getPerPage() {
 	return perPage;
 	}
 
-	@JsonProperty("per_page")
 	public void setPerPage(Long perPage) {
 	this.perPage = perPage;
 	}
 
-	@JsonProperty("total")
 	public Long getTotal() {
 	return total;
 	}
 
-	@JsonProperty("total")
 	public void setTotal(Long total) {
 	this.total = total;
 	}
 
-	@JsonProperty("total_pages")
 	public Long getTotalPages() {
 	return totalPages;
 	}
 
-	@JsonProperty("total_pages")
 	public void setTotalPages(Long totalPages) {
 	this.totalPages = totalPages;
 	}
+	
+	public Long getID() {
+	return id;
+	}
 
-	@JsonProperty("data")
+	public void setID(Long id) {
+	this.id = id;
+	}
+	
+	public String getName() {
+	return name;
+	}
+		
+	public void setName(String name) {
+	this.name = name;
+	}
+	
+	public String getJob() {
+	return job;
+	}
+			
+	public void setJob(String job) {
+	this.job = job;
+	}
+	
+	public String getCreatedAt() {
+	return createdAt;
+	}
+			
+	public void setCreatedAt(String createdAt) {
+	this.createdAt = createdAt;
+	}
+
 	public List<Response> getData() {
 	return data;
 	}
 
-	@JsonProperty("data")
 	public void setData(List<Response> data) {
 	this.data = data;
 	}
 
-	@JsonAnyGetter
 	public Map<String, Object> getAdditionalProperties() {
 	return this.additionalProperties;
 	}
 
-	@JsonAnySetter
 	public void setAdditionalProperty(String name, Object value) {
 	this.additionalProperties.put(name, value);
 	}

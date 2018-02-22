@@ -2,7 +2,7 @@
 	<soap:Header />
 	<soap:Body>
 		<web:GetInfoByZIP>
-			<web:USZip>27410</web:USZip>
+			<web:USZip>28117</web:USZip>
 		</web:GetInfoByZIP>
 	</soap:Body>
 </soap:Envelope> 

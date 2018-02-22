@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:ValidateUKAddress>
+         <!--Optional:-->
+         <web:Town>Shawford</web:Town>
+         <!--Optional:-->
+         <web:County>Hampshire</web:County>
+         <!--Optional:-->
+         <web:PostCode>SO21</web:PostCode>
+      </web:ValidateUKAddress>
+   </soapenv:Body>
+</soapenv:Envelope>

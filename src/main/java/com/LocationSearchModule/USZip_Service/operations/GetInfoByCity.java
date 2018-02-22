@@ -18,7 +18,7 @@ public class GetInfoByCity extends USZip{
 			removeWhiteSpace();
 		}
 		
-		public void setState(String value) {
+		public void setCity(String value) {
 			setRequestNodeValueByXPath("/Envelope/Body/GetInfoByCity/USCity", value);
 		}
 		

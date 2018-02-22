@@ -9,7 +9,7 @@ import com.orasi.utils.TestReporter;
 
 public class TestPostsNew {
 	@Test 
-	public void testPostsNew() {						// Tests https://reqres.in/ List Users API example				PASSED
+	public void testPostsNew() {						// Tests https://reqres.in/ List Users API example				ALWAYS PASS(FAIL)
 		
 		Request request = new Request();
 		

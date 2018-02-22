@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class TestRegister {
 	@Test
-	public void testRegister() {				// Tests https://reqres.in/ Register Successful					PASSED
+	public void testRegister() {				// Tests https://reqres.in/ Register Successful					ALWAYS PASS (FAIL)
 		
 		String email = "sydney@fife";
 		String password = "pistol";
@@ -23,8 +23,8 @@ public class TestRegister {
 		
 		TestReporter.logAPI(response.getStatusCode() == 201,
 				"Validating the Correct Response", response);
-		
-		TestReporter.softAssertTrue(data.getToken() == "QpwL5tke4Pnpja7X",
+		System.out.println("The token is: "+data.getToken());
+		TestReporter.softAssertTrue(data.getToken() == "~~QpwL5tke4Pnpja7X~~~~~~~~~~~",				//<-- BROKEN WTF IS THIS, SHOULD BE WRONG
 				"Validating the Token ID");
 	}
 }
