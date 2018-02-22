@@ -32,7 +32,17 @@ public class TestDelay {														// Tests https://reqres.in/ Delayed Respon
 		TestReporter.softAssertTrue(data.getTotalPages() == 4,
 				"Validating the total number of pages");
 		
-		// Could add cases for the data inside the Datum.java (data table)
+		TestReporter.assertTrue(data.getData().get(0).getId() == 1,
+				"Validating the first entry's ID");
+		
+		TestReporter.assertTrue(data.getData().get(0).getFirstName().equals("George"),
+				"Validating the first entry's First Name");
+		
+		TestReporter.assertTrue(data.getData().get(0).getLastName().equals("Bluth"),
+				"Validating the first entry's Last Name");
+		
+		TestReporter.assertTrue(data.getData().get(0).getAvatar().equals("https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"),
+				"Validating the first entry's avatar URL");
 		
 		TestReporter.assertAll();
 	}

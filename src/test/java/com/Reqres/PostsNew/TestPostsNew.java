@@ -31,7 +31,17 @@ public class TestPostsNew {
 		TestReporter.softAssertTrue(data.getTotalPages() == 4,
 				"Validating the number of pages");
 		
-		// Could add cases for the data inside the Datum.java (data table)
+		TestReporter.assertTrue(data.getData().get(0).getId() == 4,
+				"Validating the first entry's ID");
+		
+		TestReporter.assertTrue(data.getData().get(0).getFirstName().equals("Eve"),
+				"Validating the first entry's first name");
+		
+		TestReporter.assertTrue(data.getData().get(0).getLastName().equals("Holt"),
+				"Validating the first entry's last name");
+		
+		TestReporter.assertTrue(data.getData().get(0).getAvatar().equals("https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"),
+				"Validating the first entry's avatar URL");
 		
 		TestReporter.assertAll();
 	}
