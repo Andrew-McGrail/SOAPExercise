@@ -18,10 +18,5 @@ public class update {
 	
 	public RestResponse createListResponses(Request request) {		// Creates https://reqres.in/ "Get" "List<resource>" 
 		return restService.sendGetRequest(Path+"unknown",  HeaderType.JSON);
-	}
-	
-	public RestResponse createSingleResponses(Request request) {	// Creates https://reqres.in/ "Get" "Single<resource>"
-		return restService.sendGetRequest(Path+"unknown/2", HeaderType.JSON);
-	}
-	
+	}	
 }

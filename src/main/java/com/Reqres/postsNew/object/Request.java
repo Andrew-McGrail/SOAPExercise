@@ -9,8 +9,6 @@ public class Request {
 	private String firstName;
 	private String lastName;
 	private String avatar;
-	private String name;
-	private String job;
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 	
 	public Long getId() {
@@ -43,22 +41,6 @@ public class Request {
 	
 	public void setAvatar(String avatar) {
 	this.avatar = avatar;
-	}
-	
-	public String getName() {
-	return name;
-	}
-		
-	public void setName(String name) {
-	this.name = name;
-	}
-	
-	public String getJob() {
-	return job;
-	}
-			
-	public void setJob(String job) {
-	this.job = job;
 	}
 	
 	public Map<String, Object> getAdditionalProperties() {

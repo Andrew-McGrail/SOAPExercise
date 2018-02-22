@@ -1,7 +1,7 @@
 package com.Reqres.delete;
 
 import com.Reqres.RestReqres;
-import com.Reqres.Register.object.Request;
+import com.Reqres.delete.object.Request;
 import com.orasi.api.restServices.RestResponse;
 import com.orasi.api.restServices.RestService;
 import com.orasi.api.restServices.Headers.HeaderType;

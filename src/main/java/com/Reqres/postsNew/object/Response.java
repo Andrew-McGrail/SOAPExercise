@@ -3,98 +3,96 @@ package com.Reqres.postsNew.object;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"page",
+"per_page",
+"total",
+"total_pages",
+"data"
+})
 
 public class Response {
-	
-	private Long page;
-	private Long perPage;
-	private Long total;
-	private Long totalPages;
-	private Long id;
-	private String name;
-	private String job;
-	private String createdAt;
-	private List<Response> data = null;
+//---vv Created by jsonchema2pojo.org vv--------------------------------
+	@JsonProperty("page")
+	private Integer page;
+	@JsonProperty("per_page")
+	private Integer perPage;
+	@JsonProperty("total")
+	private Integer total;
+	@JsonProperty("total_pages")
+	private Integer totalPages;
+	@JsonProperty("data")
+	private List<Datum> data = null;
+	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-	public Long getPage() {
+//---^^ Created by jsonschema2pojo.org ^^--------------------------------------------------------------	
+	
+	@JsonProperty("page")
+	public Integer getPage() {
 	return page;
 	}
 
-	public void setPage(Long page) {
+	@JsonProperty("page")
+	public void setPage(Integer page) {
 	this.page = page;
 	}
 
-	public Long getPerPage() {
+	@JsonProperty("per_page")
+	public Integer getPerPage() {
 	return perPage;
 	}
 
-	public void setPerPage(Long perPage) {
+	@JsonProperty("per_page")
+	public void setPerPage(Integer perPage) {
 	this.perPage = perPage;
 	}
 
-	public Long getTotal() {
+	@JsonProperty("total")
+	public Integer getTotal() {
 	return total;
 	}
 
-	public void setTotal(Long total) {
+	@JsonProperty("total")
+	public void setTotal(Integer total) {
 	this.total = total;
 	}
 
-	public Long getTotalPages() {
+	@JsonProperty("total_pages")
+	public Integer getTotalPages() {
 	return totalPages;
 	}
 
-	public void setTotalPages(Long totalPages) {
+	@JsonProperty("total_pages")
+	public void setTotalPages(Integer totalPages) {
 	this.totalPages = totalPages;
 	}
-	
-	public Long getID() {
-	return id;
-	}
 
-	public void setID(Long id) {
-	this.id = id;
-	}
-	
-	public String getName() {
-	return name;
-	}
-		
-	public void setName(String name) {
-	this.name = name;
-	}
-	
-	public String getJob() {
-	return job;
-	}
-			
-	public void setJob(String job) {
-	this.job = job;
-	}
-	
-	public String getCreatedAt() {
-	return createdAt;
-	}
-			
-	public void setCreatedAt(String createdAt) {
-	this.createdAt = createdAt;
-	}
-
-	public List<Response> getData() {
+	@JsonProperty("data")
+	public List<Datum> getData() {
 	return data;
 	}
 
-	public void setData(List<Response> data) {
+	@JsonProperty("data")
+	public void setData(List<Datum> data) {
 	this.data = data;
 	}
 
+	@JsonAnyGetter
 	public Map<String, Object> getAdditionalProperties() {
 	return this.additionalProperties;
 	}
 
+	@JsonAnySetter
 	public void setAdditionalProperty(String name, Object value) {
 	this.additionalProperties.put(name, value);
 	}
+//-----^^ Created by jsonschema2pojo.org------------------------------
 }

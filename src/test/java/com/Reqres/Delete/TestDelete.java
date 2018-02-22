@@ -3,7 +3,7 @@ package com.Reqres.Delete;
 import org.testng.annotations.Test;
 
 import com.Reqres.RestReqres;
-import com.Reqres.Register.object.Request;
+import com.Reqres.delete.object.Request;
 import com.orasi.api.restServices.RestResponse;
 import com.orasi.utils.TestReporter;
 

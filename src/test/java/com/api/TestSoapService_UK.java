@@ -46,9 +46,9 @@ public class TestSoapService_UK extends TestEnvironment{
 	@Test
 	public void validateUKAddress() {
 		ValidateUKAddress getInfo = new ValidateUKAddress();
+		getInfo.setTown("Shawford");
 		getInfo.setCounty("Hampshire");
 		getInfo.setPostCode("SO21");
-		getInfo.setTown("Shawford");
 		getInfo.sendRequest();
 		getInfo.fix();
 		TestReporter.logAPI(getInfo.getNumberOfResults() !=0, "Results were returned", getInfo);

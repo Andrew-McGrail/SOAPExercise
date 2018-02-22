@@ -5,6 +5,8 @@ import com.Reqres.delete.delete;
 import com.Reqres.postsNew.postsNew;
 import com.Reqres.user.user;
 import com.Reqres.update.update;
+import com.Reqres.singleUser.singleUser;
+import com.Reqres.create.create;
 
 public class RestReqres {
 	
@@ -18,6 +20,10 @@ public class RestReqres {
 		return new user();
 	}
 	
+	public static singleUser singleUser() {
+		return new singleUser();
+	}
+	
 	public static update update() {
 		return new update();
 	}
@@ -28,5 +34,9 @@ public class RestReqres {
 
 	public static Register register() {
 		return new Register();
+	}
+	
+	public static create create() {
+		return new create();
 	}
 }

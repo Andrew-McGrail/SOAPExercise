@@ -1,35 +1,36 @@
-package com.Reqres.PostsNew;
+package com.Reqres.User;
 
 import org.testng.annotations.Test;
+
 import com.Reqres.RestReqres;
-import com.Reqres.postsNew.object.Request;
-import com.Reqres.postsNew.object.Response;
+import com.Reqres.user.object.Request;
+import com.Reqres.user.object.Response;
 import com.orasi.api.restServices.RestResponse;
 import com.orasi.utils.TestReporter;
 
-public class TestPostsNew {
-	@Test 
-	public void testPostsNew() {						// Tests https://reqres.in/ List Users API example				PASS
+public class TestDelay {														// Tests https://reqres.in/ Delayed Response 		PASS
+	@Test
+	public void testDelay() {
 		
 		Request request = new Request();
 		
-		RestResponse response = RestReqres.posts().createPostsNew(request);
+		RestResponse response = RestReqres.user().delay(request);
 		Response data = response.mapJSONToObject(Response.class);
 		
 		TestReporter.logAPI(response.getStatusCode() == 200,
 				"Validating the Correct Response", response);
 		
-		TestReporter.softAssertTrue(data.getPage() == 2,
-				"Validating the page number");
+		TestReporter.softAssertTrue(data.getPage() == 1,
+				"Validating the page");
 		
 		TestReporter.softAssertTrue(data.getPerPage() == 3,
-				"Validating the number of entries per page");		
+				"Validating the listings per page");
 		
 		TestReporter.softAssertTrue(data.getTotal() == 12,
-				"Validating the total number of entries");
+				"Validating the total number of listings");
 		
 		TestReporter.softAssertTrue(data.getTotalPages() == 4,
-				"Validating the number of pages");
+				"Validating the total number of pages");
 		
 		// Could add cases for the data inside the Datum.java (data table)
 		
