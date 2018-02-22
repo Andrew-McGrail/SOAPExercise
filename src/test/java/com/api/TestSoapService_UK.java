@@ -19,6 +19,7 @@ public class TestSoapService_UK extends TestEnvironment{
 		getInfo.setCounty("Hampshire");
 		getInfo.sendRequest();
 		getInfo.fix();
+		getInfo.fix();
 		TestReporter.logAPI(getInfo.getNumberOfResults() !=0, "Results were returned", getInfo);
 		TestReporter.assertTrue(getInfo.validateResponse(excelFileLocation + "/GetUKLocationByCounty/UKCounty.xlsx", "Main"), "Validate Response");
 	}
@@ -29,6 +30,7 @@ public class TestSoapService_UK extends TestEnvironment{
 		getInfo.setPostCode("SO21");
 		getInfo.sendRequest();
 		getInfo.fix();
+		getInfo.fix();
 		TestReporter.logAPI(getInfo.getNumberOfResults() !=0, "Results were returned", getInfo);
 		TestReporter.assertTrue(getInfo.validateResponse(excelFileLocation + "/GetUKLocationByPostCode/UKPostCode.xlsx", "Main"), "Validate Response");
 	}
@@ -38,6 +40,7 @@ public class TestSoapService_UK extends TestEnvironment{
 		GetUKLocationByTown getInfo = new GetUKLocationByTown();
 		getInfo.setTown("Shawford");
 		getInfo.sendRequest();
+		getInfo.fix();
 		getInfo.fix();
 		TestReporter.logAPI(getInfo.getNumberOfResults() !=0, "Results were returned", getInfo);
 		TestReporter.assertTrue(getInfo.validateResponse(excelFileLocation + "/GetUKLocationByTown/UKTown.xlsx", "Main"), "Validate Response");
@@ -50,6 +53,7 @@ public class TestSoapService_UK extends TestEnvironment{
 		getInfo.setCounty("Hampshire");
 		getInfo.setPostCode("SO21");
 		getInfo.sendRequest();
+		getInfo.fix();
 		getInfo.fix();
 		TestReporter.logAPI(getInfo.getNumberOfResults() !=0, "Results were returned", getInfo);
 		TestReporter.assertTrue(getInfo.validateResponse(excelFileLocation + "/ValidateUKAddress/UKValidate.xlsx", "Main"), "Validate Response");
