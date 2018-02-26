@@ -1,0 +1,19 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://smartbear.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <smar:SetSampleObject>
+         <!--Optional:-->
+         <smar:obj>
+            <smar:X>?</smar:X>
+            <smar:Y>?</smar:Y>
+            <!--Optional:-->
+            <smar:Name>?</smar:Name>
+            <!--Optional:-->
+            <smar:IntArray>
+               <!--Zero or more repetitions:-->
+               <smar:int>?</smar:int>
+            </smar:IntArray>
+         </smar:obj>
+      </smar:SetSampleObject>
+   </soapenv:Body>
+</soapenv:Envelope>

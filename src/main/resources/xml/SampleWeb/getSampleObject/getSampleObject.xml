@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smar="http://smartbear.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <smar:GetSampleObject>
+         <smar:no>9</smar:no>
+      </smar:GetSampleObject>
+   </soapenv:Body>
+</soapenv:Envelope>

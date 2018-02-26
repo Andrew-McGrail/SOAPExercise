@@ -27,7 +27,7 @@ public class GetUKLocationByPostCode extends UKLocation{
 	}
 	
 	public void fix() {
-		// David's wonder code
+		// Recreate the XML after accessing the CDATA
         String rawResponse = "";
         try {
             rawResponse = getResponseNodeValueByXPath("/Envelope/Body/GetUKLocationByPostCodeResponse/GetUKLocationByPostCodeResult");

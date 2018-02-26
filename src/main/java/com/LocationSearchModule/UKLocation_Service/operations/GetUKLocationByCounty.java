@@ -23,11 +23,11 @@ public class GetUKLocationByCounty extends UKLocation{
 	}
 	
 	public int getNumberOfResults() {
-		return getNumberOfResponseNodesByXPath("/NewDataSet/Table");				// <-- CDATA screws this up.
+		return getNumberOfResponseNodesByXPath("/NewDataSet/Table");				// <-- CDATA screwed this up.
 	}
 	
 	public void fix() {
-		// David's wonder code
+		// Recreate the XML after accessing the CDATA
         String rawResponse = "";
         try {
             rawResponse = getResponseNodeValueByXPath("/Envelope/Body/GetUKLocationByCountyResponse/GetUKLocationByCountyResult");

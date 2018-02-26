@@ -35,7 +35,7 @@ public class ValidateUKAddress extends UKLocation{
 	}
 	
 	public void fix() {
-		// David's wonder code
+		// Recreate the XML after accessing the CDATA
         String rawResponse = "";
         try {
             rawResponse = getResponseNodeValueByXPath("/Envelope/Body/ValidateUKAddressResponse/ValidateUKAddressResult");
